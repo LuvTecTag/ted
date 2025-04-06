@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- 蛋糕底座 -->
+  <rect x="50" y="120" width="100" height="40" rx="5" fill="#ffcdd2" />
+  
+  <!-- 蛋糕中层 -->
+  <rect x="60" y="90" width="80" height="30" rx="5" fill="#f8bbd0" />
+  
+  <!-- 蛋糕顶层 -->
+  <rect x="70" y="70" width="60" height="20" rx="5" fill="#e1bee7" />
+  
+  <!-- 奶油装饰 -->
+  <path d="M50,120 Q60,110 70,120" stroke="#fff" stroke-width="3" fill="none" />
+  <path d="M70,120 Q80,110 90,120" stroke="#fff" stroke-width="3" fill="none" />
+  <path d="M90,120 Q100,110 110,120" stroke="#fff" stroke-width="3" fill="none" />
+  <path d="M110,120 Q120,110 130,120" stroke="#fff" stroke-width="3" fill="none" />
+  <path d="M130,120 Q140,110 150,120" stroke="#fff" stroke-width="3" fill="none" />
+  
+  <!-- 蜡烛 -->
+  <rect x="80" y="55" width="5" height="15" fill="#ffcc80" />
+  <rect x="100" y="50" width="5" height="20" fill="#ffcc80" />
+  <rect x="120" y="55" width="5" height="15" fill="#ffcc80" />
+  
+  <!-- 烛光 -->
+  <ellipse cx="82.5" cy="50" rx="3" ry="5" fill="#ffeb3b" />
+  <ellipse cx="102.5" cy="45" rx="3" ry="5" fill="#ffeb3b" />
+  <ellipse cx="122.5" cy="50" rx="3" ry="5" fill="#ffeb3b" />
+  
+  <!-- 气球 -->
+  <circle cx="40" cy="40" r="15" fill="#90caf9" opacity="0.8" />
+  <path d="M40,55 L45,80" stroke="#90caf9" stroke-width="2" />
+  
+  <circle cx="160" cy="50" r="15" fill="#ffab91" opacity="0.8" />
+  <path d="M160,65 L155,90" stroke="#ffab91" stroke-width="2" />
+  
+  <circle cx="30" cy="80" r="10" fill="#b39ddb" opacity="0.8" />
+  <path d="M30,90 L35,105" stroke="#b39ddb" stroke-width="2" />
+  
+  <circle cx="170" cy="90" r="10" fill="#80deea" opacity="0.8" />
+  <path d="M170,100 L165,115" stroke="#80deea" stroke-width="2" />
+  
+  <!-- 彩带 -->
+  <path d="M20,20 Q60,40 100,20 Q140,0 180,20" stroke="#ef9a9a" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+  <path d="M20,30 Q60,50 100,30 Q140,10 180,30" stroke="#ce93d8" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+</svg>

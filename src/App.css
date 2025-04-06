@@ -1,0 +1,298 @@
+#root {
+  width: 100%;
+  padding: 2rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* 添加全局居中样式 */
+.app-container {
+  min-height: calc(100vh - 4rem);
+  width: 100%;
+  padding: 2rem 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 6c2-3 6-3 8 0s6 3 8 0 6-3 8 0 6 3 8 0' fill='%23ffd6e7' fill-opacity='0.2'/%3E%3C/svg%3E");
+  opacity: 0.15;
+  z-index: -1;
+}
+
+h1 {
+  font-family: 'Comic Sans MS', cursive;
+  color: #ff6b6b;
+  text-shadow: 2px 2px 4px rgba(255,107,107,0.2);
+  margin-bottom: 2rem;
+}
+
+.upload-section, .scenarios-section {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* 添加粉色渐变背景 */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe8f0 0%, #ffd6e7 100%);
+  background: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 100%) !important;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+/* 手写字体标题 */
+.app-container h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 场景卡片发光效果 */
+.scenario-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255,105,180,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.scenario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255,105,180,0.8);
+}
+
+/* 花瓣飘落动画 */
+@keyframes fall {
+  from { transform: translateY(-100vh) rotate(0deg); }
+  to { transform: translateY(100vh) rotate(360deg); }
+}
+
+.scenario-card::after {
+  content: '❀';
+  position: absolute;
+  animation: fall 10s linear infinite;
+  opacity: 0.6;
+}
+
+/* 上传区域爱心效果 */
+.upload-zone {
+  background: rgba(255,255,255,0.9);
+  border: 2px dashed #ff69b4;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.upload-zone:hover {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 0 25px rgba(255,105,180,0.4);
+}
+
+.upload-zone::before {
+  content: '❤️';
+  font-size: 2rem;
+  position: absolute;
+  opacity: 0.3;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.scenario-card {
+  margin: 10px auto;
+  box-shadow: 0 4px 20px rgba(255,182,193,0.2);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.scenario-card:hover {
+  transform: translateY(-5px);
+}
+
+.scenario-card h3,
+.scenario-card p {
+  margin: 12px 0;
+  text-align: center;
+}
+
+/* 上传按钮样式优化 */
+.upload-zone {
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #fff5f5);
+  box-shadow: 0 8px 32px rgba(255,192,203,0.15);
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 上传区域响应式调整 */
+@media (max-width: 768px) {
+  .upload-zone .button-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .upload-zone .icon {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* 场景卡片立体效果 */
+.scenario-card {
+  border-radius: 16px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 
+    0 4px 20px rgba(255,182,193,0.1),
+    0 8px 40px rgba(255,182,193,0.08);
+}
+
+/* 统计面板样式 */
+.stats-panel {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(255,182,193,0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.success-rate {
+  font-size: 1.2rem;
+  color: #ff85a2;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.upload-history h4 {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.history-item {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  background: #fff5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-item.success {
+  border-left: 4px solid #8ce99a;
+}
+
+.history-item.failed {
+  border-left: 4px solid #ff8787;
+}
+
+/* 全局容器微调 */
+.app-container {
+  padding: 2rem 10%;
+}
+
+/* 场景网格响应式布局 */
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .scenarios-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scenarios-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* 全局响应式媒体样式 */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 响应式容器调整 */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1.5rem 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 1rem 3%;
+  }
+}
+
+/* 标题文字间距调整 */
+h1 {
+  letter-spacing: 0.05em;
+}
+
+.scenario-card h3,
+.scenario-card p {
+  margin: 12px 0;
+  text-align: center;
+}

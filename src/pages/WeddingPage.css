@@ -1,0 +1,153 @@
+/* 婚礼祝福场景样式 */
+.wedding-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #fff0f5 0%, #ffb6c1 100%);
+  overflow: hidden;
+}
+
+/* 爱心背景 */
+.wedding-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/wedding-hearts-bg.svg');
+  background-size: 100px 100px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* 页面内容 */
+.wedding-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* 标题样式 */
+.wedding-page h2 {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-size: 3rem;
+  color: #d81b60;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 布局选择器样式 */
+.wedding-page .layout-selector {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.wedding-page .layout-selector select {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid #ff80ab;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #c2185b;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wedding-page .layout-selector select:hover {
+  background-color: #fff;
+  border-color: #c2185b;
+}
+
+/* 材料展示区域 */
+.wedding-page .materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* 响应式布局调整 */
+@media (max-width: 768px) {
+  .wedding-page .materials-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wedding-page .materials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.wedding-page .materials-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 材料项样式 */
+.wedding-page .material-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  padding: 10px;
+  border: 2px solid rgba(255, 128, 171, 0.3);
+}
+
+.wedding-page .material-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #ff4081;
+}
+
+.wedding-page .material-item img,
+.wedding-page .material-item video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 爱心飘落动画 */
+@keyframes heartFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: absolute;
+  top: -50px;
+  color: #ff4d4d;
+  font-size: 20px;
+  z-index: 0;
+  animation: heartFall linear infinite;
+}

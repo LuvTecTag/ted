@@ -1,0 +1,74 @@
+/* HomePage组件的科技感背景样式 */
+.home-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('/tech-background.svg') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* 页面内容 */
+.home-container h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.7), 0 0 20px rgba(255, 165, 0, 0.5);
+  z-index: 1;
+}
+
+/* 上传区域样式 */
+.upload-section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
+/* 上传区域内部样式调整 */
+.upload-zone {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(5px);
+  border: 2px dashed rgba(255, 165, 0, 0.6) !important;
+  border-radius: 15px !important;
+  transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.4) !important;
+}
+
+/* 场景选择区域 */
+.scenarios-section {
+  width: 100%;
+  max-width: 1000px;
+  z-index: 1;
+}
+
+/* 场景卡片样式 */
+.scenario-card {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(8px);
+  border-radius: 15px !important;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.3) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.scenario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.5) !important;
+}
+
+/* 场景卡片文字样式 */
+.scenario-card h2,
+.scenario-card p {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}

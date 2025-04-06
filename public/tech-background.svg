@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c3e50" />
+      <stop offset="100%" stop-color="#fd746c" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  
+  <!-- 网格线 -->
+  <g stroke="rgba(255,255,255,0.1)" stroke-width="1">
+    <!-- 水平线 -->
+    <line x1="0" y1="200" x2="1920" y2="200" />
+    <line x1="0" y1="400" x2="1920" y2="400" />
+    <line x1="0" y1="600" x2="1920" y2="600" />
+    <line x1="0" y1="800" x2="1920" y2="800" />
+    <line x1="0" y1="1000" x2="1920" y2="1000" />
+    
+    <!-- 垂直线 -->
+    <line x1="200" y1="0" x2="200" y2="1080" />
+    <line x1="400" y1="0" x2="400" y2="1080" />
+    <line x1="600" y1="0" x2="600" y2="1080" />
+    <line x1="800" y1="0" x2="800" y2="1080" />
+    <line x1="1000" y1="0" x2="1000" y2="1080" />
+    <line x1="1200" y1="0" x2="1200" y2="1080" />
+    <line x1="1400" y1="0" x2="1400" y2="1080" />
+    <line x1="1600" y1="0" x2="1600" y2="1080" />
+    <line x1="1800" y1="0" x2="1800" y2="1080" />
+  </g>
+  
+  <!-- 光效元素 -->
+  <g filter="url(#glow)">
+    <circle cx="960" cy="540" r="300" fill="rgba(253, 116, 108, 0.1)" />
+    <circle cx="960" cy="540" r="200" fill="rgba(253, 116, 108, 0.2)" />
+    <circle cx="960" cy="540" r="100" fill="rgba(253, 116, 108, 0.3)" />
+  </g>
+  
+  <!-- 科技线条 -->
+  <g stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none">
+    <path d="M100,100 L300,50 L500,150 L700,100 L900,200" />
+    <path d="M1000,900 L1200,850 L1400,950 L1600,900 L1800,950" />
+    <path d="M200,200 L200,400 L400,600 L600,600 L800,400" />
+    <path d="M1100,200 L1300,400 L1500,300 L1700,500 L1900,300" />
+  </g>
+  
+  <!-- 数据点 -->
+  <g fill="rgba(255,255,255,0.8)">
+    <circle cx="300" cy="50" r="3" />
+    <circle cx="500" cy="150" r="3" />
+    <circle cx="700" cy="100" r="3" />
+    <circle cx="900" cy="200" r="3" />
+    <circle cx="1200" cy="850" r="3" />
+    <circle cx="1400" cy="950" r="3" />
+    <circle cx="1600" cy="900" r="3" />
+    <circle cx="200" cy="400" r="3" />
+    <circle cx="400" cy="600" r="3" />
+    <circle cx="600" cy="600" r="3" />
+    <circle cx="1300" cy="400" r="3" />
+    <circle cx="1500" cy="300" r="3" />
+    <circle cx="1700" cy="500" r="3" />
+  </g>
+</svg>
