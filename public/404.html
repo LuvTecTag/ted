@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>页面重定向</title>
+  <script>
+    // GitHub Pages的SPA应用404解决方案
+    // 基于: https://github.com/rafgraph/spa-github-pages
+    (function() {
+      // 这是一个简单的SPA重定向脚本
+      var pathSegmentsToKeep = 1; // 保留的路径段数，通常为1（仓库名）
+
+      var l = window.location;
+      // 保存当前URL到会话存储，用于重定向后恢复
+      sessionStorage.redirect = l.pathname + l.search + l.hash;
+      
+      // 重定向到仓库根目录
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/ted/' // 明确指定仓库名称
+      );
+    })();
+  </script>
+</head>
+<body>
+  <h1>页面重定向中...</h1>
+  <p>如果您没有被自动重定向，<a href="https://LuvTecTag.github.io/ted/">请点击这里</a>。</p>
+</body>
+</html>

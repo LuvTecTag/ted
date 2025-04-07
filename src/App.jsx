@@ -16,13 +16,13 @@ function App() {
       id: 1,
       title: '生日祝福场景',
       description: '温馨的生日祝福模板',
-      thumbnail: '/birthday-thumbnail.jpg'
+      thumbnail: './birthday-thumbnail.jpg'
     },
     {
       id: 2,
       title: '婚礼祝福场景',
       description: '浪漫的婚礼祝福模板',
-      thumbnail: '/wedding-thumbnail.jpg'
+      thumbnail: './wedding-thumbnail.jpg'
     }
   ])
 
